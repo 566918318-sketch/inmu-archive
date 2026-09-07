@@ -232,7 +232,7 @@
 <footer>
   <b>真夏夜 · 银梦档案馆</b> · INMU ARCHIVE<br>
   本页为亚文化梗图鉴，一切描述点到为止 · 请勿在现实中寻访会员制餐厅<br>
-  BGM 默认为原创氛围改编 · 将合法拥有的《圣诞快乐，劳伦斯先生》命名为 <b>bgm.mp3</b> 放入本站目录即可聆听原曲<br>
+  BGM《圣诞快乐，劳伦斯先生》· 坂本龙一 · 点击右上角 ♪ 播放<br>
   馆藏影像均采集自公开网络（B站视频封面等），仅作梗文化展示
 </footer>
 
@@ -507,7 +507,7 @@ document.addEventListener("click", e => {
   btn.addEventListener("click", async () => {
     if (playing) { stopAll(); return; }
     if (!audio) {
-      audio = new Audio("bgm.mp3");
+      audio = new Audio("assets/music.m4a");
       audio.loop = true;
       audio.addEventListener("error", () => { audio = null; }, {once:true});
     }
@@ -520,7 +520,7 @@ document.addEventListener("click", e => {
       audio = null;
       synth = startSynth();
       playing = true; btn.classList.add("playing");
-      label.textContent = "♪ 冬夜氛围改编（可放入 bgm.mp3 换原曲）";
+      label.textContent = "♪ 冬夜氛围改编（原曲加载失败）";
     }
   });
 })();
