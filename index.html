@@ -507,7 +507,7 @@ document.addEventListener("click", e => {
   btn.addEventListener("click", async () => {
     if (playing) { stopAll(); return; }
     if (!audio) {
-      audio = new Audio("assets/music.m4a");
+      audio = new Audio("assets/music.mp3");
       audio.loop = true;
       audio.addEventListener("error", () => { audio = null; }, {once:true});
     }
